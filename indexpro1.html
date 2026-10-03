@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music & Movies</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f0f4;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6d315d, #b65c91);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            background-color: white;
+            color: #6d315d;
+            border: none;
+            border-radius: 20px;
+            padding: 11px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #f1d9e9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        h2 {
+            color: #6d315d;
+            border-bottom: 2px solid #d49abb;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        .songs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .song {
+            background-color: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .song h3 {
+            margin-top: 0;
+            color: #6d315d;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .movie {
+            background-color: white;
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+
+        .movie h3 {
+            color: #6d315d;
+            margin-top: 0;
+        }
+
+        .movie-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .movie img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .movie video {
+            width: 500px;
+            max-width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        footer {
+            background-color: #3d2035;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .movie-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .movie img {
+                width: 100%;
+                height: auto;
+            }
+
+            .movie video {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Music, Movies & Memories 🎵</h1>
+
+    <p>
+        I love music and Indian blockbuster movies.
+        This is my little collection of some of my favourite songs
+        and movie videos, all in one place.
+    </p>
+
+    <div class="buttons">
+        <button onclick="document.getElementById('songs').scrollIntoView()">
+            Play the Music
+        </button>
+
+        <button onclick="document.getElementById('movies').scrollIntoView()">
+            Top Movies
+        </button>
+    </div>
+</header>
+
+
+<div class="container">
+
+    <section id="songs">
+
+        <h2>🎧 My Favourite Songs</h2>
+
+        <div class="songs">
+
+            <div class="song">
+                <h3>Song 1</h3>
+                <audio src="/assects/assect1.mp3" controls></audio>
+            </div>
+
+            <div class="song">
+                <h3>Song 2</h3>
+                <audio src="/assects/assect2.mp3" controls></audio>
+            </div>
+
+            <div class="song">
+                <h3>Song 3</h3>
+                <audio src="/assects/assect3.mp3" controls></audio>
+            </div>
+
+            <div class="song">
+                <h3>Song 4</h3>
+                <audio src="/assects/Shaidai Drama (2).mp3" controls></audio>
+            </div>
+
+            <div class="song">
+                <h3>Song 5</h3>
+                <audio src="/assects/Tum Sa Nahi Hai Koi Hoon Main Bas Tera - Ost.mp3" controls></audio>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="movies">
+
+        <h2>🎬 My Favourite Movie Trailers & Songs</h2>
+
+
+        <div class="movie">
+            <h3>1. SALAAR</h3>
+
+            <div class="movie-content">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW-aA_LM8aoKl9BZyBcmROTwbGvVI4s6jr2A-2BSaljQ&s=10"
+                     alt="Salaar">
+
+                <video
+                    poster="https://resize.indiatv.in/resize/newbucket/1200_-/2023/07/salar-1688807119.jpg"
+                    src="/assects/Salaar Telugu Trailer _ Prabhas _ Prashanth Neel _ Prithviraj_Shruthi_Hombale Films_Vijay Kiragandur.mp4"
+                    controls>
+                </video>
+
+            </div>
+        </div>
+
+
+        <div class="movie">
+            <h3>2. MEEM SE MOHABBATH</h3>
+
+            <div class="movie-content">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9O5jWDYYzxgcPX63p01dujZ6S4L44rsDKtye8e2CjSaNf3nl28EOimM&s=10"
+                     alt="Meem Se Mohabbat">
+
+                <video
+                    poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQie-He7lXAJ0JWbdnJ69lmYiP6q3pHcSWMKoFiDegpcA&s=10"
+                    src="/assects/Baat (Haan Mohabbat Par Yaqeen) - Meem Se Mohabbat (Climax Version) _ Asim Azhar _ Beqarar Yeh Dil 🎶.mp4"
+                    controls>
+                </video>
+
+            </div>
+        </div>
+
+
+        <div class="movie">
+            <h3>3. SANAM TERI KASAM</h3>
+
+            <div class="movie-content">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWzaMdk2X_spqlWfe3HY97-UcZ54Gz9IPr8PjeT4NBzQ&s=10"
+                     alt="Sanam Teri Kasam">
+
+                <video
+                    poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3nrM4obb6QyeAquDL-rYQx3F5WmJHmFZkVZZpdVotsg&s=10"
+                    src="/assects/Sanam Teri Kasam - Re Releasing Trailer _ 7th Feb 2025 _ Harshvardhan, Mawra, Radhika, Vinay, Deepak (1).mp4"
+                    controls>
+                </video>
+
+            </div>
+        </div>
+
+
+        <div class="movie">
+            <h3>4. MERI ZINDAGI HAI TU</h3>
+
+            <div class="movie-content">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJhk4sElbl3qA1sL50vKo3N0053hOtbuEqwD7vPiDxvw&s=10"
+                     alt="Meri Zindagi Hai Tu">
+
+                <video
+                    poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKH4PUqwzYONUbMX0CBd-dMQjRVGDbj9L6dcR1BylUg&s=10"
+                    src="/assects/MERI ZINDAGI HAI TU _ VIDEO SONG _ ASIM AZHAR _ SABRI SISTERS.mp4"
+                    controls>
+                </video>
+
+            </div>
+        </div>
+
+
+        <div class="movie">
+            <h3>5. AASHIQUI 2</h3>
+
+            <div class="movie-content">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7hMNCkasiVRjU1bp9peBqXi3-r7QCxHQ3VI2VjEAZmg&s=10"
+                     alt="Aashiqui 2">
+
+                <video
+                    poster="https://meerasfilmblog.wordpress.com/wp-content/uploads/2013/08/aashiqui-2.jpg?w=660&h=400&crop=1"
+                    src="/assects/Tum Hi Ho Song Aashiqui 2 _ Music By Mithoon _ Aditya Roy Kapur, Shraddha Kapoor.mp4"
+                    controls>
+                </video>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<footer>
+    <p>Made with ❤️ for Music & Movies</p>
+    <p>© 2026 My Music & Movies</p>
+</footer>
+<script>
+    const media = document.querySelectorAll("audio, video");
+
+    media.forEach(item => {
+        item.addEventListener("play", () => {
+            media.forEach(other => {
+                if (other !== item) {
+                    other.pause();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+```
